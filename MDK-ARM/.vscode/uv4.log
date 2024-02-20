@@ -1,0 +1,219 @@
+*** Using Compiler 'V6.21', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Key'
+compiling stm32g4xx_hal.c...
+compiling stm32g4xx_hal_msp.c...
+compiling stm32g4xx_hal_flash_ramfunc.c...
+compiling gpio.c...
+compiling usart.c...
+compiling stm32g4xx_it.c...
+compiling tim.c...
+../Core/Src/main.c(254): warning: passing 'uint8_t[30]' (aka 'unsigned char[30]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  254 |                 sprintf(text , "   CNBR:%d           ",CNBR);
+      |                         ^~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+  417 | extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+      |                                                   ^
+../Core/Src/main.c(256): warning: passing 'uint8_t[30]' (aka 'unsigned char[30]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  256 |                 sprintf(text , "   VNBR:%d           ",VNBR);
+      |                         ^~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+  417 | extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+      |                                                   ^
+../Core/Src/main.c(258): warning: passing 'uint8_t[30]' (aka 'unsigned char[30]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  258 |                 sprintf(text , "   IDLE:%d           ",IDLE);
+      |                         ^~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+  417 | extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+      |                                                   ^
+../Core/Src/main.c(266): warning: passing 'uint8_t[30]' (aka 'unsigned char[30]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  266 |                 sprintf(text,"   CNBR:%.2f      ",cnbr_price);
+      |                         ^~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+  417 | extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+      |                                                   ^
+../Core/Src/main.c(268): warning: passing 'uint8_t[30]' (aka 'unsigned char[30]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  268 |                 sprintf(text,"   VNBR:%.2f      ",vnbr_price);
+      |                         ^~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+  417 | extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+      |                                                   ^
+../Core/Src/main.c(328): warning: passing 'uint8_t[30]' (aka 'unsigned char[30]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  328 |   if(numok && (strncmp("VNBR",rxbuffer,4)==0||strncmp("CNBR",rxbuffer,4)==0))
+      |                               ^~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(132): note: passing argument to parameter here
+  132 | extern _ARMABI int strncmp(const char * /*s1*/, const char * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+      |                                                                    ^
+../Core/Src/main.c(328): warning: passing 'uint8_t[30]' (aka 'unsigned char[30]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  328 |   if(numok && (strncmp("VNBR",rxbuffer,4)==0||strncmp("CNBR",rxbuffer,4)==0))
+      |                                                              ^~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(132): note: passing argument to parameter here
+  132 | extern _ARMABI int strncmp(const char * /*s1*/, const char * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+      |                                                                    ^
+../Core/Src/main.c(330): warning: passing 'uint8_t[30]' (aka 'unsigned char[30]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  330 |     sscanf(rxbuffer,"%4s:%4s:%12s", car_type , car_data , car_time);
+      |            ^~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(529): note: passing argument to parameter here
+  529 | extern _ARMABI int sscanf(const char * __restrict /*s*/,
+      |                                                        ^
+../Core/Src/main.c(342): error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Wint-conversion]
+  342 |         HAL_UART_Transmit(&huart1 , (uint8_t*)ifpark , strlen(ifpark),50);
+      |                                                               ^~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(335): note: passing argument to parameter here
+  335 | extern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+      |                                                ^
+../Core/Src/main.c(347): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  347 |       if(strncmp("CNBR" , car_type , 4)==0)
+      |                           ^~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(132): note: passing argument to parameter here
+  132 | extern _ARMABI int strncmp(const char * /*s1*/, const char * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+      |                                                                    ^
+../Core/Src/main.c(351): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  351 |       }else if(strncmp("VNBR" , car_type , 4)==0)
+      |                                 ^~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(132): note: passing argument to parameter here
+  132 | extern _ARMABI int strncmp(const char * /*s1*/, const char * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+      |                                                                    ^
+../Core/Src/main.c(356): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  356 |       strcpy(park[emptyPark].car_type , car_type);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                     ^
+../Core/Src/main.c(356): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  356 |       strcpy(park[emptyPark].car_type , car_type);
+      |                                         ^~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                                                     ^
+../Core/Src/main.c(357): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  357 |       strcpy(park[emptyPark].car_data , car_data);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                     ^
+../Core/Src/main.c(357): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  357 |       strcpy(park[emptyPark].car_data , car_data);
+      |                                         ^~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                                                     ^
+../Core/Src/main.c(358): warning: passing 'uint8_t[13]' (aka 'unsigned char[13]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  358 |       strcpy(park[emptyPark].car_time , car_time);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                     ^
+../Core/Src/main.c(358): warning: passing 'uint8_t[13]' (aka 'unsigned char[13]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  358 |       strcpy(park[emptyPark].car_time , car_time);
+      |                                         ^~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                                                     ^
+../Core/Src/main.c(379): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  379 |       if(strncmp("CNBR" , car_type , 4)==0)
+      |                           ^~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(132): note: passing argument to parameter here
+  132 | extern _ARMABI int strncmp(const char * /*s1*/, const char * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+      |                                                                    ^
+../Core/Src/main.c(382): warning: passing 'uint8_t[10]' (aka 'unsigned char[10]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  382 |         sprintf(price , "%.2f\n" , cnbr_price*hourlong);
+      |                 ^~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+  417 | extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+      |                                                   ^
+../Core/Src/main.c(383): warning: passing 'uint8_t[10]' (aka 'unsigned char[10]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  383 |         HAL_UART_Transmit(&huart1 , (uint8_t *)price , strlen(price) , 50);
+      |                                                               ^~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(335): note: passing argument to parameter here
+  335 | extern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+      |                                                ^
+../Core/Src/main.c(386): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  386 |         strcpy(park[ifpark].car_type , "0");
+      |                ^~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                     ^
+../Core/Src/main.c(387): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  387 |         strcpy(park[ifpark].car_data , "0");
+      |                ^~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                     ^
+../Core/Src/main.c(388): warning: passing 'uint8_t[13]' (aka 'unsigned char[13]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  388 |         strcpy(park[ifpark].car_time , "0");
+      |                ^~~~~~~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                     ^
+../Core/Src/main.c(405): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  405 |       if(strncmp(car_type , park[i].car_type , 4)==0 && strncmp(car_data , park[i].car_data , 4)==0)
+      |                  ^~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(132): note: passing argument to parameter here
+  132 | extern _ARMABI int strncmp(const char * /*s1*/, const char * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+      |                                               ^
+../Core/Src/main.c(405): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  405 |       if(strncmp(car_type , park[i].car_type , 4)==0 && strncmp(car_data , park[i].car_data , 4)==0)
+      |                             ^~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(132): note: passing argument to parameter here
+  132 | extern _ARMABI int strncmp(const char * /*s1*/, const char * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+      |                                                                    ^
+../Core/Src/main.c(405): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  405 |       if(strncmp(car_type , park[i].car_type , 4)==0 && strncmp(car_data , park[i].car_data , 4)==0)
+      |                                                                 ^~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(132): note: passing argument to parameter here
+  132 | extern _ARMABI int strncmp(const char * /*s1*/, const char * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+      |                                               ^
+../Core/Src/main.c(405): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  405 |       if(strncmp(car_type , park[i].car_type , 4)==0 && strncmp(car_data , park[i].car_data , 4)==0)
+      |                                                                            ^~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(132): note: passing argument to parameter here
+  132 | extern _ARMABI int strncmp(const char * /*s1*/, const char * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+      |                                                                    ^
+../Core/Src/main.c(427): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  427 |       strcpy(park[i].car_data , "");
+      |              ^~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                     ^
+../Core/Src/main.c(428): warning: passing 'uint8_t[13]' (aka 'unsigned char[13]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  428 |       strcpy(park[i].car_time , "");
+      |              ^~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                     ^
+../Core/Src/main.c(429): warning: passing 'uint8_t[5]' (aka 'unsigned char[5]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  429 |       strcpy(park[i].car_type , "");
+      |              ^~~~~~~~~~~~~~~~
+D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(77): note: passing argument to parameter here
+   77 | extern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+      |                                                     ^
+29 warnings and 1 error generated.
+compiling main.c...
+compiling stm32g4xx_hal_gpio.c...
+compiling stm32g4xx_hal_rcc_ex.c...
+compiling stm32g4xx_hal_flash_ex.c...
+compiling stm32g4xx_hal_pwr_ex.c...
+compiling stm32g4xx_hal_flash.c...
+compiling stm32g4xx_hal_rcc.c...
+compiling stm32g4xx_hal_exti.c...
+compiling stm32g4xx_hal_tim_ex.c...
+compiling stm32g4xx_hal_pwr.c...
+compiling stm32g4xx_hal_dma_ex.c...
+compiling stm32g4xx_hal_cortex.c...
+compiling stm32g4xx_hal_uart_ex.c...
+compiling stm32g4xx_hal_dma.c...
+compiling system_stm32g4xx.c...
+compiling interrupt.c...
+compiling stm32g4xx_hal_tim.c...
+../BSP/lcd.c(200): warning: passing 'char[21]' to parameter of type 'u8 *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  200 |     LCD_DisplayStringLine(Line, "                    ");
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+../BSP/lcd.h(187): note: passing argument to parameter 'ptr' here
+  187 | void LCD_DisplayStringLine(u8 Line, u8 *ptr);
+      |                                         ^
+1 warning generated.
+compiling lcd.c...
+compiling stm32g4xx_hal_uart.c...
+"Key\Key.axf" - 1 Error(s), 30 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:03
